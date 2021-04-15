@@ -5,7 +5,7 @@ import "firebase/firestore";
 import firebaseConfig from './Firebase.config';
 
 
-if (firebase.app.length > 0) {
+if (firebase.app.length === 0) {
     firebase.initializeApp(firebaseConfig)
 }
 
