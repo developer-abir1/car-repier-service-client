@@ -1,5 +1,5 @@
 import React from 'react';
-import Sidebar from '../Dashboard/sidebar/sidebar';
+import Sidebar from '../sidebar/sidebar';
 import { useForm } from "react-hook-form";
 
 const Admin = () => {
@@ -9,8 +9,8 @@ const Admin = () => {
 
 
     return (
-        <div>
-            <div className="container-fluid"> row ">
+        <div className="container-fluid">
+            <div className="row">
                 <Sidebar></Sidebar>
                 <div className="col-md-10 p-4 pr-5" style={{ position: "absolute", right: 0, backgroundColor: "#F4F7FC" }}>
                     <form onSubmit={handleSubmit(onSubmit)}>
