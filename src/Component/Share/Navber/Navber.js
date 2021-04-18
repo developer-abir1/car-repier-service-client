@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../img/Capture.PNG'
 
 const Navber = () => {
     return (
         <div className="container">
             <nav class="navbar navbar-expand-lg navbar-light py-4">
-                <div class="container-fluid">
+                <div class="container-fluid ">
                     <a class="navbar-brand" href="#"><img style={{width:"100px"}} src={logo} alt="" srcset=""/></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -22,7 +23,7 @@ const Navber = () => {
                                 <a class="nav-link ms-3" href="#">service</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link ms-3" href="#">Deshboard</a>
+                     <Link to="/dashboard">       <a class="nav-link ms-3" href="#">Dashboard</a> </Link>    
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link ms-3" href="#">Admin</a>
