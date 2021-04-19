@@ -4,7 +4,7 @@ import HeaderCarousel from '../HeaderCarousel/HeaderCarousel';
 
 const Header = () => {
     return (
-        <div>
+        <div className="header-container">
             <Navber></Navber>
             <HeaderCarousel></HeaderCarousel>
         </div>

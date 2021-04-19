@@ -1,0 +1,21 @@
+
+#uploadImg {
+    display: none;
+}
+
+label {
+    border: 1px solid green;
+    color: green;
+    justify-content: center;
+    padding: 5px 10px;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+label:hover{
+ 
+    color: white;
+    background-color: green
+}

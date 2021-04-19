@@ -1,5 +1,5 @@
 import React from 'react';
-import plumber from './img/plumber.png';
+import ac from '../../../imge/ac.png';
 import './HeaderCarosole.css'
 
 const HeaderCarousel = () => {
@@ -12,11 +12,11 @@ const HeaderCarousel = () => {
 
                             <div className="row">
                                 <div className="col-md-6 py-3">
-                                    <img style={{ height: "500px" }} src={plumber} alt="" srcset="" />
+                                    <img style={{ width: "450px", height:"100%" }} src={ac} alt="" srcset="" />
                                 </div>
-                                <div className="col-md-6 mt-5 py-3">
-                                    <h1 className="text-primary">Plumbing To Electrical Repairs - Apply For Our Services</h1>
-                                    <p className="text-secondary mt-5 py-3">We complete critical repairs needed for homeowners to remain in their homes. We offer critical repairs needed for people to remain in their homes safely. Free Home Repairs. Tues and Thurs from 10-3. Veteran Home Repairs. Senior Chore Help.</p>
+                                <div className="col-md-6 mt-5 py-4">
+                                    <h1 className="text-primary">In-depth Knowledge and experience to install, maintain and repair AC</h1>
+                                    <p className="text-secondary mt-5 py-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam accusantium provident animi totam vel at optio libero distinctio. Similique commodi sunt doloremque fugiat maiores sapiente aliquid voluptates est laudantium laborum?</p>
                                     <button className="btn btn-outline-success">Shop Now</button>
 
                                 </div>

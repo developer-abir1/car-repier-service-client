@@ -10,6 +10,7 @@ import Login from './Component/Login/Login';
 import Dashboard from './Component/Dashboard/Dashboard/Dashboard';
 import Review from './Component/Dashboard/Review/Review';
 import Admin from './Component/Dashboard/Admin/Admin';
+import AddService from './Component/AddService/AddService';
 function App() {
   return (
     <Router>
@@ -29,9 +30,12 @@ function App() {
         <Route path="/admin">
           <Admin></Admin>
         </Route>
-        <Router path="/review">
+        <Route path="/review">
           <Review></Review>
-        </Router>
+        </Route>
+        <Route path="/addService">
+          <AddService></AddService>
+        </Route>
       </Switch>
     </Router>
   );
