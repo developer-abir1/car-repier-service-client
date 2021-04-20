@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../../../App';
 import photo from '../../../imge/bg.png'
 import './ServiceReview.css'
 
 const ServiceReview = ({ review }) => {
+    
     return (
      <div className="col-md-3 mr-3 py-3">
         <div className="card shadow-sm" > 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {   useContext, useState } from 'react';
 import firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/firestore";
@@ -12,7 +12,9 @@ if (firebase.app.length === 0) {
 
 const Login = () => {
 
-    const [loginUser, setLoginUser] = useState({})
+
+    
+  
 
     const provider = new firebase.auth.GoogleAuthProvider();
    
@@ -25,7 +27,7 @@ const Login = () => {
            
             const {displayName, email, photoURL} = result.user;
             const users = {name: displayName, email, photo: photoURL}
-            setLoginUser(users)
+            console.log(users)
         }).catch((error) => {
             var errorCode = error.code;
             var errorMessage = error.message;
@@ -44,11 +46,9 @@ const Login = () => {
     }
     return (
         <div>
-       { loginUser ? <button onClick={handleGoogleSingIn}>Google Login</button> :
-        <button onClick={handleGoogleSingOut}>Google Sing Out</button>}
+        <button onClick={handleGoogleSingIn}>Google Login</button> 
+        
 
-        <h1>Name:{loginUser.name}</h1>
-        <img src={loginUser.photo} alt="" srcset=""/>
         </div>
     );
 };

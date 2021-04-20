@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../../Share/Footer/Footer';
 import Header from '../Header/Header';
 import InfoService from '../InfoService/InfoService';
 import ReviewData from '../ReviewData/ReviewData';
@@ -11,6 +12,7 @@ const Home = () => {
                <ServiceData></ServiceData>
                <InfoService></InfoService>
                <ReviewData></ReviewData>
+               <Footer></Footer>
         </div>
     );
 };

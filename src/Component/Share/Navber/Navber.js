@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {  } from 'react';
 import { Link } from 'react-router-dom';
+import {  } from '../../../App';
 import logo from '../img/Capture.PNG'
 
 const Navber = () => {
@@ -31,7 +32,12 @@ const Navber = () => {
                             <li class="nav-item">
                                 <a class="nav-link ms-3" href="#">Contact us </a> 
                             </li>
-                            
+                            <li class="nav-item">
+                             
+                            </li>
+                            <li class="nav-item">
+                                
+                            </li>
                         </ul>
                     </div>
                 </div>

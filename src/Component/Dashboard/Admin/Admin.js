@@ -6,8 +6,30 @@ import UpdateDelete from '../UpdateDelete/UpdateDelete';
 
 const Admin = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    
   const [services, setServices] = useState([]);
+
+    const onSubmit = data => {
+         const addAdmin =
+             {
+                 email: data.email
+             }
+             console.log(data)
+             fetch("http://localhost:4500/addAdmin",{
+                method:"POST",
+                headers:{'Content-Type': 'application/json'},
+                body: JSON.stringify(addAdmin)
+              })
+              .then(res => console.log("admin is done", res))
+            
+         
+
+
+    };
+
+
+
+
 
   useEffect(() =>{
     fetch(`https://blooming-spire-22229.herokuapp.com/services`)
@@ -16,7 +38,8 @@ const Admin = () => {
         setServices(data);
     })
   },[])
-
+    
+  
 
 
 
@@ -24,7 +47,7 @@ const Admin = () => {
         <div className="container-fluid">
             <div className="row">
                 <Sidebar></Sidebar>
-                <div className="col-md-10 p-4 pr-5" style={{ position: "absolute", right: 0, backgroundColor: "#F4F7FC", height: "700px" }}>
+                <div className="col-md-10 p-4 pr-5 " style={{ position: "absolute", right: 0, backgroundColor: "#F4F7FC", height: "700px" }}>
                     <h1>Add Admin</h1>
                     <form onSubmit={handleSubmit(onSubmit)}>
 
