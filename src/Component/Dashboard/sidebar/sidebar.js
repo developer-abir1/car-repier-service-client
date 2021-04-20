@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './sidebar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog, faSignOutAlt, faCalendar, faHome, faGripHorizontal, faUserPlus, faUsers, faStreetView, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faCog, faSignOutAlt, faCalendar, faHome, faGripHorizontal, faUserPlus, faUsers, faStreetView, faPlus, faRecycle } from '@fortawesome/free-solid-svg-icons';
 import { faFileAlt } from '@fortawesome/free-regular-svg-icons'
 
 const Sidebar = () => {
@@ -24,17 +24,17 @@ const Sidebar = () => {
                  <div>
                     <li>
                         <Link to="/" style={{textDecoration:'none'}} className="text-white">
-                            <FontAwesomeIcon icon={faCalendar} /> <span>Appointments</span>
+                            <FontAwesomeIcon icon={faCalendar} /> <span>Order Book</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/" style={{textDecoration:'none'}} className="text-white">
-                            <FontAwesomeIcon icon={faUsers} /> <span>Patients</span>
+                            <FontAwesomeIcon icon={faUsers} /><span>Book list</span>
                         </Link>
                     </li>
                     <li>
                         <Link to="/review" style={{textDecoration:'none'}} className="text-white">
-                            <FontAwesomeIcon icon={faStreetView} /> <span>Review</span>
+                            <FontAwesomeIcon icon={faRecycle} /> <span>Review</span>
                         </Link>
                     </li>
                     <li>
@@ -44,7 +44,7 @@ const Sidebar = () => {
                     </li>
                     <li>
                         <Link to="/admin" style={{textDecoration:'none'}} className="text-white" >
-                            <FontAwesomeIcon icon={faCog} /> <span>Settings</span>
+                            <FontAwesomeIcon icon={faCog} /> <span>Admin</span>
                         </Link>
                     </li>
                 </div>

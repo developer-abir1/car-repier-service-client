@@ -18,7 +18,7 @@ const Review = () => {
             description: data.description
         }
         console.log(reviewData);
-    fetch('http://localhost:4500/addReview', {
+    fetch('https://blooming-spire-22229.herokuapp.com/addReview', {
         method: 'POST',
         headers:{ 'Content-Type': 'Application/json'},
         body: JSON.stringify(reviewData)

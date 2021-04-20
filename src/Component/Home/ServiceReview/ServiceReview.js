@@ -4,17 +4,20 @@ import './ServiceReview.css'
 
 const ServiceReview = ({ review }) => {
     return (
-      <div className=" card-content">
-            <div class="card" style={{width: "12rem"}}>
-        <img id="img"   src={photo} class="card-img-top" alt="..."/>
-        <div class="card-body">
-          <h5 class="card-title">{review.name}</h5>
-          <p class="card-text">{review.company}</p>
-          <p class="card-text">{review.description}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+     <div className="col-md-3 mr-3 py-3">
+        <div className="card shadow-sm" > 
+      <div className="card-body">
+          <p className="card-text text-center text-secondary">{review.description}</p>
       </div>
+      <div className="card-footer d-flex  align-items-center">
+          <img className="mx-3" src={photo} alt="" width="60" style={{height:"50"}}/>
+          <div>
+              <h6 className="text-card">{review.name}</h6>
+              <p className="m-0 text-brand">{review.company}</p>
+          </div>
       </div>
+ </div>
+     </div>
     );
 };
 

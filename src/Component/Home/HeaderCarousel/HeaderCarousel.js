@@ -1,5 +1,5 @@
 import React from 'react';
-import ac from '../../../imge/ac.png';
+import photo from '../../../imge/carosell1.png'
 import './HeaderCarosole.css'
 
 const HeaderCarousel = () => {
@@ -12,13 +12,13 @@ const HeaderCarousel = () => {
 
                             <div className="row">
                                 <div className="col-md-6 py-3">
-                                    <img style={{ width: "450px", height:"100%" }} src={ac} alt="" srcset="" />
+                                <h1 className="text-brand text-uppercase">Perform maintenance and repair on customer vehicles</h1>
+                                    <p className="text-secondary mt-5 py-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam accusantium provident animi totam vel at optio libero distinctio. Similique commodi sunt doloremque fugiat maiores sapiente aliquid voluptates est laudantium laborum?</p>
+                                    <button className="btn btn-success">Shop Now</button>
+                                    
                                 </div>
                                 <div className="col-md-6 mt-5 py-4">
-                                    <h1 className="text-primary">In-depth Knowledge and experience to install, maintain and repair AC</h1>
-                                    <p className="text-secondary mt-5 py-3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam accusantium provident animi totam vel at optio libero distinctio. Similique commodi sunt doloremque fugiat maiores sapiente aliquid voluptates est laudantium laborum?</p>
-                                    <button className="btn btn-outline-success">Shop Now</button>
-
+                                <img style={{ width: "500px", height:"100%" }} src={photo} alt="" srcset="" />
                                 </div>
                             </div>
                         </div>

@@ -1,16 +1,16 @@
 import React from 'react';
 import Header from '../Header/Header';
-import HomeService from '../HomeService/HomeService';
 import InfoService from '../InfoService/InfoService';
-import Testmonial from '../Testmonial/Testmonial';
+import ReviewData from '../ReviewData/ReviewData';
+import ServiceData from '../ServiceData/ServiceData';
 import './Home.css'
 const Home = () => {
     return (
         <div className="home-container">
                <Header></Header>
-               <HomeService></HomeService>
+               <ServiceData></ServiceData>
                <InfoService></InfoService>
-               <Testmonial></Testmonial>
+               <ReviewData></ReviewData>
         </div>
     );
 };

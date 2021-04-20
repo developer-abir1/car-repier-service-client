@@ -8,11 +8,12 @@ const InfoService = () => {
             <div className="col-md-6">
             <img src={image} className="img-fluid" alt="" srcset=""/>
             </div>
-            <div className="col-md-6">
-            <h1>Emergency need your installation</h1>
+            <div className="col-md-6 mt-5 my-3 py-3">
+            <h1 className="text-brand text-uppercase">Automotive body designs are frequently categorized according</h1>
             
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet libero id, similique, necessitatibus culpa voluptas quo amet deleniti vero repellendus rem rerum delectus impedit voluptate earum ex quam odit quis.</p>
+            <p className="text-secondary">An Automotive Technician repairs and maintains cars and trucks. Automotive Technicians conduct diagnostic tests on vehicles and replace worn or damaged components. They troubleshoot and repair a variety of engine systems to ensure that the proper repairs may be made to the customer's satisfaction.</p>
             <h1 className="text-primary">01752103786</h1>
+            <button className="btn-brand">Learn More</button>
             </div>
         </div>
        </section>

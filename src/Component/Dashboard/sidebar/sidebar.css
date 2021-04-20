@@ -1,5 +1,5 @@
 .sidebar{
-   background: black;
+   background-image: linear-gradient(#ffd89b , #19547b);
     position: fixed;
 }
 .sidebar li{

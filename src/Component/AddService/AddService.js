@@ -8,48 +8,40 @@ import { Button, Input } from '@material-ui/core';
 import axios from 'axios';
 
 const AddService = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const [info, setInfo] = useState({})
-    const [file, setFile] = useState(null)
-    
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const [imageURL, setImageURL] = useState({})
+  
 
+ 
+  const onSubmit = data => {
+    const addData ={
+      name: data.name,
+      price: data.price,
+      description: data.description,
+      image: imageURL
 
-
-
-    const onSubmit = () => {
-      const formData = new FormData()
-      formData.append('file', file)
-      formData.append('name', info.name)
-      formData.append('price',info.price)
-      formData.append('description', info.description)
-    
-      fetch('http://localhost:6500/addService', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data)
-      })
-      .catch(error => {
-        console.error(error)
-      })
-        
     };
+    fetch("https://blooming-spire-22229.herokuapp.com/addService",{
+      method:"POST",
+      headers:{'Content-Type': 'application/json'},
+      body: JSON.stringify(addData)
+    })
+    .then(res => console.log("post is Done", res))
+  }
 
-   const handleBlur = (e) =>{
-       const newInfo ={...info}
-       newInfo[e.target.name] = e.target.value
-       setInfo(newInfo)
+  
+const handleUploadImage = e =>{
 
-   }
-    
+  const imageData = new FormData()
+  imageData.set('key', 'e805ac140d838f01a27f27aad6e43f4d')
+  imageData.append('image', e.target.files[0]);
+  axios.post('https://api.imgbb.com/1/upload',imageData)
+  .then(res =>{
+   setImageURL(res.data.data.display_url)
+  })
+}
 
-   const handleFileChange = (e) =>{
-       const newFile = e.target.files[0]
-       setFile(newFile)
 
-   }
   
     return (
         <div className="container-fluid">
@@ -64,25 +56,25 @@ const AddService = () => {
                      
                       <div className="col-md-6">
                       <p><strong>Enter your Name</strong></p>
-                      <input type="text" {...register("name", { required: true })} onBlur={handleBlur} name="name" placeholder="Enter service name" />
+                      <input type="text" {...register("name", { required: true })}  name="name" placeholder="Enter service name" />
                       <br/>
                       {errors.name && <span style={{color: "red"}}>This field is Enter service name</span>}
                       <br/>
                       <br/>
                       <p><strong>Enter service price</strong></p>
-                      <input type="text" {...register("price",{ required: true })} onBlur={handleBlur} name="price" placeholder="Enter price" />
+                      <input type="text" {...register("price",{ required: true })}  name="price" placeholder="Enter price" />
                       <br/>
                       {errors.price && <span style={{color: "red"}}>This field is Enter service price</span>}
                     
                       </div>
                       <div className="col-md-6">
                       <p><strong> Service Description </strong></p>
-                      <textarea  type="text" {...register("description", {required: true})} onBlur={handleBlur} name="description"  rows="4" cols="50"  placeholder="Description" ></textarea>
+                      <textarea  type="text" {...register("description", {required: true})}  name="description"  rows="4" cols="50"  placeholder="Description" ></textarea>
                         <br/>
                         {errors.description && <span style={{color: "red"}}>This field is description</span>}
                        
                       <p><strong>upload Image</strong></p>
-                      <input id="uploadImg"  onChange={handleFileChange} type="file"  />
+                      <input id="uploadImg"  onChange={handleUploadImage} type="file"  />
                     <label for="uploadImg">
                     <FontAwesomeIcon icon={faCloudDownloadAlt} />  Upload an image
                     </label>
